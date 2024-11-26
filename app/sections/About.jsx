@@ -6,7 +6,7 @@ import { useState } from 'react';
 const About = () => {
     const[hasCopied,setHasCopied]=useState(false);
     const handleCopy = () => {
-        navigator.clipboard.writeText("ahamednafees777@gmail.com");
+        navigator.clipboard.writeText("abduljass006@gmail.com");
         setHasCopied(true);
     
         setTimeout(() => {
@@ -22,9 +22,9 @@ const About = () => {
                    <img src="../assets/grid1.png" alt="grid-1" 
                    className="w-full sm:h-[276px] h-fit object-contain"/> 
                    <div className="">
-                    <p className="grid-headtext">Hi I&apos;m ahmed nafees</p>
-                    <p className="grid-subtext"> with 1 year of experience i have honed
-                        my skills in both front-end and back-end development as a freelancing developer.
+                    <p className="grid-headtext">Hi I&apos;m abdul jasam</p>
+                    <p className="grid-subtext"> with 2 year of experience i have honed
+                        my skills in both front-end and back-end development as a full stack developer.
                     </p>
                    </div>
                 </div>
@@ -32,12 +32,12 @@ const About = () => {
             <div className="col-span-1 xl:row-span-3
              ">
                 <div className="grid-container">
-                    <img src="../assets/edited-grid-png2.png" alt="grid-2" 
+                    <img src="../assets/edited.png" alt="grid-2" 
                     className="w-full sm:h-[276px] h-fit object-contain" />
                     <div>
                         <p className="grid-headtext">Tech Stack</p>
                         <p className="grid-subtext"> 
-                            i specialize in JavaScript/TypeScript and SpringBoot with a focus on React and Next.js ecosystem. </p>
+                            i specialize in JavaScript/TypeScript and DotNet Core with a focus on React and Next.js ecosystem. </p>
                     </div>
                 </div>
              </div>
@@ -54,14 +54,16 @@ const About = () => {
                 showGraticules
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                labelsData={[{ lat: 13, lng: 80, text: 'i am here', color: 'white', size: 15 }]}
+                labelsData={[{ lat: 25, lng: 55, text: 'i am here', color: 'white', size: 35 }]}
               />
 
                     </div>
                     <div>
                         <p className="grid-headtext"> I work remotely across timezones</p>
-                        <p className="grid-subtext">I&apos;m based in india with Remote work availability.</p>
+                        <p className="grid-subtext">I&apos;m based in Abudhabi with Remote work availability.</p>
+                        <a href="#contact">
                         <Button name="contact me" isBeam containerClass="w-full mt-10" />
+                        </a>
                     </div>
                 </div>
              </div>
@@ -86,7 +88,7 @@ const About = () => {
                         <div 
                         className="copy-container" onClick={handleCopy} >
                             <img src={hasCopied ? "../assets/tick.svg" : "../assets/copy.svg"} alt="copy" />
-                            <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">ahamednafees777@gmail.com</p>
+                            <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">abduljass006@gmail.com</p>
                         </div>
                     </div>
                 </div>

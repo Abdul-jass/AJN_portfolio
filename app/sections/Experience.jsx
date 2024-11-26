@@ -21,7 +21,7 @@ const Experience = () => {
     isBig ?
     <section className="c-space my-20" id="exp">
       <div className="w-full text-white-600">
-        <h3 className="head-text">My Major Technologies</h3>
+        <h3 className="head-text">My Major Technologies & Experience</h3>
         <div className="work-container">
        <div className="work-canvas">
             <Canvas 
