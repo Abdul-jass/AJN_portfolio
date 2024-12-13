@@ -1,9 +1,10 @@
 "use client"
-import HackerRoom from '@/app/components/HackerRoom'
+import dynamic from 'next/dynamic'
+const HackerRoom = dynamic(() => import('@/app/components/HackerRoom'), 
+{ ssr: false })
 import { Canvas } from '@react-three/fiber'
 import React, { Suspense } from 'react'
 import CanvasLoader from '../components/CanvasLoader'
-import { Leva, useControls } from 'leva'
 import { useMediaQuery } from 'react-responsive'
 import { calculateSizes } from '../constants/index'
 import Target from '../components/Target'
@@ -19,7 +20,7 @@ const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
-
+  const isBig = useMediaQuery({ minWidth: 1024 });
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
@@ -34,12 +35,10 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full" gl={{ antialias: false }}>
           <Suspense fallback={<CanvasLoader />}>
-            {/* To hide controller */}
-            <Leva hidden />
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HeroCamera isMobile={isMobile}>
-              <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
+              {isBig && <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />}
             </HeroCamera>
 
             <group>
