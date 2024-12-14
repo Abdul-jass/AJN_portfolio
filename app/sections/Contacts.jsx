@@ -19,7 +19,7 @@ const Contacts = () => {
     setLoading(true);
     try{
      await emailjs.send(
-        "service_mlxc0b7",
+        "service_ijsk1aw",
         "template_mu0g9ug",
         {from_name:form.name,
           to_name:"Abdul",
