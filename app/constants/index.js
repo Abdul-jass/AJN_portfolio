@@ -265,7 +265,7 @@ export const workExperiences = [
     pos: 'Full-Stack Developer',
     duration: '[july/2021 - present]',
     title: "I have woked as an Full-stack developer for the past 3.5 years untill present in the firm CyberStorm taking in numerous projects such as travel websites(TripWerkz) POS Own Company Products and more  .",
-    icon: '/assets/next.svg',
+    icon: '/assets/Cyber_Logo.svg',
     animation: 'victory',
   },
   {
